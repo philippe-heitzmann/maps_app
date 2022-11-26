@@ -1,6 +1,8 @@
-const GOOGLE_API_KEY = 'AIzaSyBj8YXVW0r54rErka4fWTB38cpByocP3MQ';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class LocationHelper {
+  static String GOOGLE_API_KEY = dotenv.env['API_KEY']!;
+
   static String generateLocationPreviewImage({
     required double latitude,
     required double longitude,
